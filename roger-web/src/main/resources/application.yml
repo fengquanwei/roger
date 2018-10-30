@@ -21,7 +21,7 @@ roger:
   key:
     name: Lask
     phone: 186****6611
-    email: ${luffy.key.phone}@163.com
+    email: ${roger.key.phone}@163.com
 
 ---
 

@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.fengquanwei</groupId>
             <artifactId>roger-dao</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
 
         <!--web-->
