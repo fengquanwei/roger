@@ -1,0 +1,56 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+      url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8&autoReconnect=true&autoReconnectForPools=true
+  jpa:
+      show-sql: true
+      database-platform: org.hibernate.dialect.MySQL5Dialect
+      hibernate:
+        ddl-auto: update
+
+logging:
+  file: /opt/log/roger/console.log
+  level:
+    root: INFO
+
+roger:
+  key:
+    name: Lask
+    phone: 186****6611
+    email: ${luffy.key.phone}@163.com
+
+---
+
+spring:
+  profiles: dev
+
+logging:
+  file: /opt/log/roger/dev.log
+
+---
+
+spring:
+  profiles: tst
+
+logging:
+  file: /opt/log/roger/tst.log
+
+---
+
+spring:
+  profiles: pre
+
+logging:
+  file: /opt/log/roger/pre.log
+
+---
+
+spring:
+  profiles: prd
+
+logging:
+  file: /opt/log/roger/prd.log
